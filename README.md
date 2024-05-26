@@ -1,10 +1,10 @@
-<h2 align="center">
+<h1 align="center">
   SVG - Circle & Bar Progress generator
   <br>
   in Golang.
   <br>
   <br>
-</h2>
+</h1>
 
 <p align="center">
   <img alt="svg circle progress sample" src="https://imgur.com/UOfAB33.png">
@@ -26,6 +26,24 @@
 **Lightweight:** No dependencies, just a single file.
 
 **Beautiful:** Customizable to rounded corners, different colors, and caption options.
+
+---
+## Reports from [coveritup](https://coveritup.app/readme?org=kevincobain2000&repo=go-progress-svg&branch=master)
+
+![go-build-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-build-time)
+![coverage](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage)
+
+![go-lint-errors](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-lint-errors)
+![go-test-run-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-test-run-time)
+
+![go-mod-dependencies](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-mod-dependencies)
+
+![go-lint-errors](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-lint-errors&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
+![go-test-run-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-test-run-time&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
+![go-build-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-build-time&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
+![coverage](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
+![go-mod-dependencies](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-mod-dependencies&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
+
 
 
 ## Usage
@@ -92,3 +110,8 @@ func main() {
     bar.SVG()
 }
 ```
+
+
+## CHANGE LOG
+
+### v1.0.0 - initial release
