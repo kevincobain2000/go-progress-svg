@@ -1,6 +1,3 @@
-<p align="center">
-  <img alt="svg circle progress sample" src="https://imgur.com/UOfAB33.png">
-</p>
 <h2 align="center">
   SVG - Circle & Bar Progress generator
   <br>
@@ -9,6 +6,14 @@
   <br>
 </h2>
 
+<p align="center">
+  <img alt="svg circle progress sample" src="https://imgur.com/UOfAB33.png">
+</p>
+<p align="center">
+  <img alt="svg circle progress sample" src="https://imgur.com/LToiOr4.png" width="300">
+</p>
+
+---
 
 **Circle Progress:** Generate pure SVG circle progress bar.
 
