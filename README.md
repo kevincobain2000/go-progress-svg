@@ -60,6 +60,7 @@ import (
 
 func main() {
 	circular, _ := gps.NewCircular(func(o *gps.CircularOptions) error {
+        o.Progress = 97
 		o.Size = 200
 		o.CircleWidth = 16
 		o.ProgressWidth = 16
