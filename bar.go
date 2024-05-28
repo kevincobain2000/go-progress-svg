@@ -16,7 +16,7 @@ var barTPL = `
   <text x="50%" y="{{.HeightHalf}}" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
   {{end}}
   {{if .Caption}}
-  <text x="50%" y="{{.CaptionY}}" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" font-weight="bold" text-anchor="middle">{{.Caption}}</text>
+  <text x="50%" y="{{.CaptionY}}" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `

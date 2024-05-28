@@ -21,7 +21,7 @@ var circularBottomTPL = `
   <text x="100" y="100" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle" transform="rotate(90 100 100)">{{.Progress}}</text>
   {{end}}
   {{if .Caption}}
-  <text x="-40" y="360" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" font-weight="bold" text-anchor="middle" transform="rotate(90 100 240)">{{.Caption}}</text>
+  <text x="-40" y="360" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle" transform="rotate(90 100 240)">{{.Caption}}</text>
   {{end}}
 </svg>
 `
@@ -39,7 +39,7 @@ var circularRightTPL = `
   <text x="71px" y="115px" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -196px)">{{.Progress}}</text>
   {{end}}
   {{if .Caption}}
-  <text x="40%" y="220px" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" font-weight="bold" text-anchor="middle">{{.Caption}}</text>
+  <text x="40%" y="220px" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `

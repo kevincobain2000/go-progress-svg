@@ -19,7 +19,7 @@ func main() {
 		o.TextSize = 52
 		o.ShowPercentage = true
 		o.BackgroundColor = ""
-		o.Caption = ""
+		o.Caption = "Coverage"
 		o.CaptionPos = "bottom"
 		o.CaptionSize = 20
 		o.CaptionColor = "#000000"
