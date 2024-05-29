@@ -10,7 +10,7 @@ import (
 
 var barTPL = `
 <svg width="{{.Width}}" height="{{.TotalHeight}}" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="100%" height="{{.Height}}" fill="{{.BackgroundColor}}" />
+  <rect x="0" y="0" width="100%" height="{{.Height}}" fill="{{.BackgroundColor}}" rx="{{.CornerRadius}}" ry="{{.CornerRadius}}" />
   <rect x="0" y="0" width="{{.ProgressWidth}}" height="{{.Height}}" fill="{{.ProgressColor}}" rx="{{.CornerRadius}}" ry="{{.CornerRadius}}" />
   {{if .ShowPercentage}}
   <text x="50%" y="{{.HeightHalf}}" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
