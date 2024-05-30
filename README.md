@@ -112,6 +112,32 @@ func main() {
 }
 ```
 
+### Battery Progress
+
+```go
+	battery, err := gps.NewBattery(func(o *gps.BatteryOptions) error {
+		o.Progress = 70
+		o.ProgressCaption = "1%"
+		o.Width = 200
+		o.Height = 50
+		o.ProgressColor = "#76e5b1"
+		o.TextColor = "black"
+		o.TextSize = 20
+		o.Caption = ""
+		o.CaptionSize = 16
+		o.CaptionColor = "#000000"
+		o.BackgroundColor = "#e0e0e0"
+		o.CornerRadius = 10
+		return nil
+	})
+	if err != nil {
+		fmt.Println("Error creating Circular:", err)
+		return
+	}
+
+	content := battery.SVG()
+```
+
 
 ## CHANGE LOG
 
