@@ -9,13 +9,13 @@ import (
 
 func main() {
 	bar, err := gps.NewBar(func(o *gps.BarOptions) error {
-		o.Progress = 97
+		o.Progress = 1
+		o.ProgressCaption = "1%"
 		o.Width = 200
 		o.Height = 50
 		o.ProgressColor = "#76e5b1"
 		o.TextColor = "#6bdba7"
 		o.TextSize = 20
-		o.ShowPercentage = true
 		o.Caption = ""
 		o.CaptionSize = 16
 		o.CaptionColor = "#000000"

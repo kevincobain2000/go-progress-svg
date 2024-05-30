@@ -12,8 +12,8 @@ var barTPL = `
 <svg width="{{.Width}}" height="{{.TotalHeight}}" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="100%" height="{{.Height}}" fill="{{.BackgroundColor}}" rx="{{.CornerRadius}}" ry="{{.CornerRadius}}" />
   <rect x="0" y="0" width="{{.ProgressWidth}}" height="{{.Height}}" fill="{{.ProgressColor}}" rx="{{.CornerRadius}}" ry="{{.CornerRadius}}" />
-  {{if .ShowPercentage}}
-  <text x="50%" y="{{.HeightHalf}}" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
+  {{if .ProgressCaption}}
+  <text x="50%" y="{{.HeightHalf}}" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.ProgressCaption}}</text>
   {{end}}
   {{if .Caption}}
   <text x="50%" y="{{.CaptionY}}" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
@@ -28,13 +28,13 @@ type Bar struct {
 
 type BarOptions struct {
 	Progress        int
+	ProgressCaption string
 	Width           int
 	Height          int
 	ProgressWidth   string
 	ProgressColor   string
 	TextColor       string
 	TextSize        int
-	ShowPercentage  bool
 	Caption         string
 	CaptionSize     int
 	CaptionColor    string
@@ -55,7 +55,6 @@ func NewBar(opts ...BarOption) (*Bar, error) {
 		ProgressColor:   "#76e5b1",
 		TextColor:       "#6bdba7",
 		TextSize:        20,
-		ShowPercentage:  true,
 		Caption:         "",
 		CaptionSize:     16,
 		CaptionColor:    "#000000",
