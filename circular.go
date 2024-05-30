@@ -59,7 +59,7 @@ func NewCircular(opts ...Option) (*Circular, error) {
 	options := &CircularOptions{
 		Progress:        0,
 		Size:            200,
-		Hsize:           230,
+		Hsize:           200,
 		CircleWidth:     16,
 		ProgressWidth:   16,
 		CircleColor:     "#e0e0e0",
@@ -83,10 +83,7 @@ func NewCircular(opts ...Option) (*Circular, error) {
 	}
 	if options.Caption != "" {
 		options.Hsize = options.Size + 30
-	} else {
-		options.Hsize = options.Size
 	}
-
 	totalCircumference := 565.48
 	segmentLength := (totalCircumference - options.SegmentGap*float64(options.SegmentCount)) / float64(options.SegmentCount)
 	options.CircleDashArray = fmt.Sprintf("%f %f", segmentLength, options.SegmentGap)
