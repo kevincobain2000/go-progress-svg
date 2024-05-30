@@ -74,6 +74,7 @@ func main() {
 		o.CaptionPos = "bottom"
 		o.CaptionSize = 20
 		o.CaptionColor = "#000000"
+        o.SegmentGap = 10
 		return nil
 	})
 
