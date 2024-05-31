@@ -5,6 +5,11 @@
   <br>
   <br>
 </h1>
+<p align="center">
+  <a href="https://coveritup.app/readme?org=kevincobain2000&repo=go-progress-svg&branch=master">
+    <img alt="svg circle progress sample" src="https://coveritup.app/progress?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=dark&style=bar" width="300">
+  </a>
+</p>
 
 <p align="center">
   <img alt="svg circle progress sample" src="https://imgur.com/UOfAB33.png">
