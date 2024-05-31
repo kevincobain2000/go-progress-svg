@@ -10,9 +10,9 @@ import (
 func main() {
 	circular, err := gps.NewCircular(func(o *gps.CircularOptions) error {
 		o.Progress = 60
-		o.Size = 200
-		o.CircleWidth = 16
-		o.ProgressWidth = 16
+		o.Size = 100
+		o.CircleWidth = 15
+		o.ProgressWidth = 15
 		o.CircleColor = "#e0e0e0"
 		o.ProgressColor = "#76e5b1"
 		o.TextColor = "#6bdba7"
@@ -20,7 +20,7 @@ func main() {
 		o.ShowPercentage = true
 		o.BackgroundColor = ""
 		o.Caption = "Coverage"
-		o.CaptionSize = 20
+		o.CaptionSize = 30
 		o.CaptionColor = "#000000"
 		o.SegmentGap = 0
 		return nil

@@ -21,7 +21,7 @@ var circularTPL = `
   <text x="100" y="100" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}</text>
   {{end}}
   {{if .Caption}}
-  <text x="100" y="210" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
+  <text x="100" y="220" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `
@@ -82,7 +82,7 @@ func NewCircular(opts ...Option) (*Circular, error) {
 		}
 	}
 	if options.Caption != "" {
-		options.Hsize = options.Size + 30
+		options.Hsize = options.Size + options.Size*30/100
 	}
 	totalCircumference := 565.48
 	segmentLength := (totalCircumference - options.SegmentGap*float64(options.SegmentCount)) / float64(options.SegmentCount)

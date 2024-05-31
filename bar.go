@@ -68,6 +68,9 @@ func NewBar(opts ...BarOption) (*Bar, error) {
 			return nil, err
 		}
 	}
+	if options.Progress < 3 {
+		options.Progress = 3
+	}
 
 	options.ProgressWidth = fmt.Sprintf("%d%%", options.Progress)
 	options.TotalHeight = options.Height + options.CaptionSize + 10 // Additional space for caption

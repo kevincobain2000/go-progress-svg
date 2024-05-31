@@ -92,6 +92,9 @@ func NewBattery(opts ...BatteryOption) (*Battery, error) {
 			return nil, err
 		}
 	}
+	if options.Progress < 3 {
+		options.Progress = 3
+	}
 
 	options.ProgressWidth = fmt.Sprintf("%d%%", options.Progress)
 	options.TotalWidth = options.Width + options.CapWidth

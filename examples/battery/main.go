@@ -9,7 +9,7 @@ import (
 
 func main() {
 	battery, err := gps.NewBattery(func(o *gps.BatteryOptions) error {
-		o.Progress = 70
+		o.Progress = 1
 		o.ProgressCaption = "1%"
 		o.Width = 200
 		o.Height = 50
