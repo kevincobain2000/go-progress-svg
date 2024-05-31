@@ -16,12 +16,12 @@ var circularTPL = `
   <circle r="90" cx="100" cy="100" fill="transparent" stroke="{{.CircleColor}}" stroke-width="{{.CircleWidth}}px" stroke-dasharray="{{.CircleDashArray}}" stroke-dashoffset="0"></circle>
   <circle r="90" cx="100" cy="100" stroke="{{.ProgressColor}}" stroke-width="{{.ProgressWidth}}px" stroke-linecap="round" stroke-dasharray="{{.ProgressDashArray}}" stroke-dashoffset="{{.Offset}}px" fill="transparent" style="transform:rotate(-90deg); transform-origin: 50% 50%;"></circle>
   {{if .ShowPercentage}}
-  <text x="100" y="100" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
+  <text x="100" y="100" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
   {{else}}
-  <text x="100" y="100" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}</text>
+  <text x="100" y="100" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}</text>
   {{end}}
   {{if .Caption}}
-  <text x="100" y="220" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
+  <text x="100" y="220" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `

@@ -18,10 +18,10 @@ var batteryTPL = `
   <rect x="{{.X}}" y="0" width="{{$.SegmentGapWidth}}" height="{{$.Height}}" fill="{{$.BackgroundColor}}" />
   {{end}}
   {{if .ProgressCaption}}
-  <text x="50%" y="{{.HeightHalf}}" font-family="sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.ProgressCaption}}</text>
+  <text x="50%" y="{{.HeightHalf}}" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.ProgressCaption}}</text>
   {{end}}
   {{if .Caption}}
-  <text x="50%" y="{{.CaptionY}}" font-family="sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
+  <text x="50%" y="{{.CaptionY}}" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `
