@@ -7,7 +7,7 @@
 </h1>
 <p align="center">
   <a href="https://coveritup.app/readme?org=kevincobain2000&repo=go-progress-svg&branch=master">
-    <img alt="svg circle progress sample" src="https://coveritup.app/progress?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=dark&style=bar" width="300">
+    <img alt="svg circle progress sample" src="https://coveritup.app/progress?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=dark&style=bar">
   </a>
 </p>
 
