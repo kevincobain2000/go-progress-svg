@@ -9,19 +9,15 @@ import (
 )
 
 var circularTPL = `
-<svg width="{{.Size}}" height="{{.Hsize}}" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="{{.CircleSize}}" height="{{.Hsize}}" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 {{if .BackgroundColor}}
   <circle r="90" cx="100" cy="100" fill="{{.BackgroundColor}}" />
 {{end}}
   <circle r="90" cx="100" cy="100" fill="transparent" stroke="{{.CircleColor}}" stroke-width="{{.CircleWidth}}px" stroke-dasharray="{{.CircleDashArray}}" stroke-dashoffset="0"></circle>
   <circle r="90" cx="100" cy="100" stroke="{{.ProgressColor}}" stroke-width="{{.ProgressWidth}}px" stroke-linecap="round" stroke-dasharray="{{.ProgressDashArray}}" stroke-dashoffset="{{.Offset}}px" fill="transparent" style="transform:rotate(-90deg); transform-origin: 50% 50%;"></circle>
-  {{if .ShowPercentage}}
-  <text x="100" y="100" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
-  {{else}}
-  <text x="100" y="100" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}</text>
-  {{end}}
+  <text x="100" y="100" font-family="Tohma,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
   {{if .Caption}}
-  <text x="100" y="220" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
+  <text x="100" y="220" font-family="Tohma,Helvetica,Arial,sans-serif,sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `
@@ -33,7 +29,7 @@ type Circular struct {
 
 type CircularOptions struct {
 	Progress          int
-	Size              int
+	CircleSize        int
 	Hsize             int
 	CircleWidth       int
 	ProgressWidth     int
@@ -41,7 +37,6 @@ type CircularOptions struct {
 	ProgressColor     string
 	TextColor         string
 	TextSize          int
-	ShowPercentage    bool
 	BackgroundColor   string
 	Caption           string
 	CaptionSize       int
@@ -58,7 +53,7 @@ type Option func(*CircularOptions) error
 func NewCircular(opts ...Option) (*Circular, error) {
 	options := &CircularOptions{
 		Progress:        0,
-		Size:            200,
+		CircleSize:      200,
 		Hsize:           200,
 		CircleWidth:     16,
 		ProgressWidth:   16,
@@ -66,7 +61,6 @@ func NewCircular(opts ...Option) (*Circular, error) {
 		ProgressColor:   "#76e5b1",
 		TextColor:       "#6bdba7",
 		TextSize:        52,
-		ShowPercentage:  true,
 		BackgroundColor: "",
 		Caption:         "",
 		CaptionSize:     20,
@@ -82,7 +76,7 @@ func NewCircular(opts ...Option) (*Circular, error) {
 		}
 	}
 	if options.Caption != "" {
-		options.Hsize = options.Size + options.Size*30/100
+		options.Hsize = options.CircleSize + options.CircleSize*30/100
 	}
 	totalCircumference := 565.48
 	segmentLength := (totalCircumference - options.SegmentGap*float64(options.SegmentCount)) / float64(options.SegmentCount)

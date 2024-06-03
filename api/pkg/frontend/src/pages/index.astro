@@ -1,0 +1,40 @@
+---
+import Layout from "@components/Layout.astro";
+import Nav from "@components/Nav.astro";
+import Hero from "@components/Hero.astro";
+import Circular from "@components/Circular.astro";
+import CircularSegments from "@components/CircularSegments.astro";
+import Battery from "@components/Battery.astro";
+import Bar from "@components/Bar.astro";
+import Article from "@components/Article.astro";
+import FinalAction from "@components/FinalAction.astro";
+import AlsoSee from "@components/AlsoSee.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<Layout
+  title="Progress SVG - Circular, bar, and battery progress bars"
+  description="Progress SVG is a collection of SVG progress bars that you can use in your projects. All progress bars are customizable and easy to use."
+>
+  <div class="h-full">
+    <Nav />
+    <Hero />
+    <p class="text-violet-400 font-mono font-bold text-center text-3xl">
+        <br />API<br />
+      </p>
+    <Circular />
+    <CircularSegments />
+    <Battery />
+    <Bar />
+    <br>
+    <br>
+    <br>
+    <hr class="w-24 h-0.5 mx-auto bg-gray-500 border-0 rounded my-10" />
+    <Article />
+    <FinalAction />
+    <AlsoSee />
+    <Footer />
+  </div>
+</Layout>
+
+<style></style>

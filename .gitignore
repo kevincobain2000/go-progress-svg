@@ -21,3 +21,4 @@ bin/
 main
 .DS_Store
 output.svg
+node_modules/

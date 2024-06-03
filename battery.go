@@ -17,11 +17,9 @@ var batteryTPL = `
   {{range .Segments}}
   <rect x="{{.X}}" y="0" width="{{$.SegmentGapWidth}}" height="{{$.Height}}" fill="{{$.BackgroundColor}}" />
   {{end}}
-  {{if .ProgressCaption}}
-  <text x="50%" y="{{.HeightHalf}}" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.ProgressCaption}}</text>
-  {{end}}
+  <text x="50%" y="{{.HeightHalf}}" font-family="Tohma,Helvetica,Arial,sans-serif,sans-serif" fill="{{.TextColor}}" font-size="{{.TextSize}}px" font-weight="bold" text-anchor="middle" alignment-baseline="middle">{{.Progress}}%</text>
   {{if .Caption}}
-  <text x="50%" y="{{.CaptionY}}" font-family="Helvetica Neue,Helvetica,Arial,sans-serif,sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
+  <text x="50%" y="{{.CaptionY}}" font-family="Tohma,Helvetica,Arial,sans-serif,sans-serif" fill="{{.CaptionColor}}" font-size="{{.CaptionSize}}px" text-anchor="middle">{{.Caption}}</text>
   {{end}}
 </svg>
 `
@@ -32,32 +30,33 @@ type Battery struct {
 }
 
 type BatteryOptions struct {
-	Progress        int
-	ProgressCaption string
-	Width           int
-	Height          int
-	ProgressWidth   string
-	ProgressColor   string
-	TextColor       string
-	TextSize        int
-	Caption         string
-	CaptionSize     int
-	CaptionColor    string
-	BackgroundColor string
-	TotalWidth      int
-	TotalHeight     int
-	HeightHalf      int
-	CaptionY        int
-	CornerRadius    int
-	CapWidth        int
-	CapHeight       int
-	CapHeightHalf   int
-	CapX            int
-	CapY            int
-	CapCornerRadius int
-	SegmentCount    int
-	SegmentGapWidth int
-	Segments        []Segment
+	Progress            int
+	ProgressCaption     string
+	Width               int
+	Height              int
+	ProgressWidth       string
+	ProgressColor       string
+	TextColor           string
+	TextSize            int
+	Caption             string
+	CaptionSize         int
+	CaptionColor        string
+	BackgroundColor     string
+	TotalWidth          int
+	TotalHeight         int
+	HeightHalf          int
+	CaptionY            int
+	CornerRadius        int
+	CapWidth            int
+	CapHeight           int
+	CapHeightProportion float64
+	CapHeightHalf       int
+	CapX                int
+	CapY                int
+	CapCornerRadius     int
+	SegmentCount        int
+	SegmentGapWidth     int
+	Segments            []Segment
 }
 
 type Segment struct {
@@ -68,22 +67,22 @@ type BatteryOption func(*BatteryOptions) error
 
 func NewBattery(opts ...BatteryOption) (*Battery, error) {
 	options := &BatteryOptions{
-		Progress:        0,
-		Width:           200,
-		Height:          50,
-		ProgressColor:   "#76e5b1",
-		TextColor:       "#6bdba7",
-		TextSize:        20,
-		Caption:         "",
-		CaptionSize:     16,
-		CaptionColor:    "#000000",
-		BackgroundColor: "#e0e0e0",
-		CornerRadius:    10,
-		CapWidth:        10,
-		CapHeight:       30,
-		CapCornerRadius: 5,
-		SegmentCount:    5,
-		SegmentGapWidth: 5,
+		Progress:            0,
+		Width:               200,
+		Height:              50,
+		ProgressColor:       "#76e5b1",
+		TextColor:           "#6bdba7",
+		TextSize:            20,
+		Caption:             "",
+		CaptionSize:         16,
+		CaptionColor:        "#000000",
+		BackgroundColor:     "#e0e0e0",
+		CornerRadius:        10,
+		CapWidth:            10,
+		CapHeightProportion: 0.6, // Set cap height to be 60% of the battery height
+		CapCornerRadius:     5,
+		SegmentCount:        5,
+		SegmentGapWidth:     5,
 	}
 
 	for _, opt := range opts {
@@ -101,6 +100,7 @@ func NewBattery(opts ...BatteryOption) (*Battery, error) {
 	options.TotalHeight = options.Height + options.CaptionSize + 10 // Additional space for caption
 	options.HeightHalf = options.Height / 2
 	options.CaptionY = options.Height + options.CaptionSize // Position caption below the bar
+	options.CapHeight = int(float64(options.Height) * options.CapHeightProportion)
 	options.CapHeightHalf = options.CapHeight / 2
 	options.CapX = options.Width
 	options.CapY = options.HeightHalf - options.CapHeightHalf
