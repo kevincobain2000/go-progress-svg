@@ -43,6 +43,9 @@
 ![go-lint-errors](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-lint-errors)
 ![go-test-run-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-test-run-time)
 
+![npm-install-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-install-time)
+![npm-build-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-build-time)
+
 ![go-mod-dependencies](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-mod-dependencies)
 
 ![go-lint-errors](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-lint-errors&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
@@ -50,6 +53,9 @@
 ![go-build-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-build-time&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
 ![coverage](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
 ![go-mod-dependencies](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-mod-dependencies&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
+
+![npm-install-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-install-time&theme=light&line=fill&width=150&height=150&output=svg)
+![npm-build-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-build-time&theme=light&line=fill&width=150&height=150&output=svg)
 
 
 
