@@ -21,11 +21,10 @@ func TestCircularSVG(t *testing.T) {
 	// Test rendering the SVG with custom options
 	circular, err = NewCircular(func(o *CircularOptions) error {
 		o.Progress = 75
-		o.Size = 300
+		o.CircleSize = 300
 		o.CircleColor = "#ff0000"
 		o.ProgressColor = "#00ff00"
 		o.TextColor = "#0000ff"
-		o.ShowPercentage = false
 		return nil
 	})
 	if err != nil {

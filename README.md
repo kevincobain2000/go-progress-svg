@@ -1,5 +1,5 @@
 <h1 align="center">
-  SVG - Circle & Bar Progress generator
+  SVG - Circle, Bar & Battery progress generator
   <br>
   in Golang.
   <br>
@@ -23,6 +23,8 @@
 **Circle Progress:** Generate pure SVG circle progress bar.
 
 **Bar Progress:** Generate pure SVG bar progress bar.
+
+**Battery Progress:** Generate pure SVG battery progress bar.
 
 **Supports Captions:** Add captions horizontally or vertically.
 
@@ -66,14 +68,13 @@ import (
 func main() {
 	circular, _ := gps.NewCircular(func(o *gps.CircularOptions) error {
         o.Progress = 97
-		o.Size = 200
+		o.CircleSize = 200
 		o.CircleWidth = 16
 		o.ProgressWidth = 16
 		o.CircleColor = "#e0e0e0"
 		o.ProgressColor = "#76e5b1"
 		o.TextColor = "#6bdba7"
-		o.TextSize = 52
-		o.ShowPercentage = true
+		o.TextSize = 52true
 		o.BackgroundColor = ""
 		o.Caption = ""
 		o.CaptionPos = "bottom"
@@ -104,8 +105,7 @@ func main() {
 		o.Height = 50
 		o.ProgressColor = "#76e5b1"
 		o.TextColor = "#6bdba7"
-		o.TextSize = 20
-		o.ShowPercentage = true
+		o.TextSize = 20true
 		o.Caption = ""
 		o.CaptionSize = 16
 		o.CaptionColor = "#000000"

@@ -1,0 +1,43 @@
+---
+let baseURL = import.meta.env.PUBLIC_BASE_URL;
+---
+
+<div class="mx-auto pt-16 font-mono">
+  <p class="text-center font-mono mb-10 text-lg text-white font-bold">
+    Circular Segments Progress SVG
+  </p>
+  <div
+    class="max-w-4xl mx-auto p-5 text-slate-400 bg-slate-800 mt-5 rounded-t-lg"
+  >
+    <p class="mb-4 text-center">
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=circle&progress_color=E74C3C&background_color=FDEDEC&circle_color=EADDCA&text_color=641E16&caption_color=D98880&progress=50&caption_size=30&caption=Danger&segment_count=50&segment_gap=10"}
+      />
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=circle&progress_color=27AE60&background_color=EAF2E3&circle_color=EADDCA&text_color=145A32&caption_color=82E0AA&progress=70&caption_size=30&caption=Success&segment_count=10&segment_gap=10"}
+      />
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=circle&progress_color=8E44AD&background_color=F5EEF8&circle_color=EADDCA&text_color=4A235A&caption_color=D2B4DE&progress=85&caption_size=30&caption=Info&segment_count=50&segment_gap=10"}
+      />
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=circle&progress_color=F39C12&background_color=FDF3E7&circle_color=EADDCA&text_color=784212&caption_color=F5CBA7&progress=90&caption_size=30&caption=Warn&segment_count=50&segment_gap=10"}
+      />
+    </p>
+  </div>
+  <div class="max-w-4xl mx-auto p-5 text-slate-400 bg-slate-900 rounded-b-lg">
+    <pre
+      class="break-all font-mono text-sm">{baseURL +
+            "/api?style=circle\n&size=100\n&progress_color=27AE60\n&background_color=EAF2E3\n&circle_color=EADDCA\n&text_color=145A32\n&caption_color=82E0AA\n&progress=70\n&caption_size=30\n&caption=Success\n&segment_count=50\n&segment_gap=10"}
+</pre>
+  </div>
+</div>
+
+<style></style>

@@ -1,0 +1,43 @@
+---
+let baseURL = import.meta.env.PUBLIC_BASE_URL;
+---
+
+<div class="mx-auto pt-16 font-mono">
+  <p class="text-center font-mono mb-10 text-lg text-white font-bold">
+    Bar Progress SVG
+  </p>
+  <div
+    class="max-w-4xl mx-auto p-5 text-slate-400 bg-slate-800 mt-5 rounded-t-lg"
+  >
+    <p class="mb-4 text-center">
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=bar&progress_color=E74C3C&background_color=FDEDEC&circle_color=EADDCA&text_color=641E16&caption_color=D98880&progress=20&&width=150&height=30&text_size=15&caption=Danger&caption_size=15"}
+      />
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=bar&progress_color=27AE60&background_color=EAF2E3&circle_color=EADDCA&text_color=FDF3E7&caption_color=82E0AA&progress=70&&width=150&height=30&text_size=15&caption=Success&caption_size=15"}
+      />
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=bar&progress_color=8E44AD&background_color=F5EEF8&circle_color=EADDCA&text_color=145A32&caption_color=D2B4DE&progress=25&&width=150&height=30&text_size=15&caption=Info&caption_size=15"}
+      />
+      <img
+        class="mx-auto p-2 inline"
+        src={baseURL +
+          "/api?style=bar&progress_color=F39C12&background_color=FDF3E7&circle_color=EADDCA&text_color=784212&caption_color=F5CBA7&progress=50&&width=150&height=30&text_size=15&caption=Warn&caption_size=15"}
+      />
+    </p>
+  </div>
+  <div class="max-w-4xl mx-auto p-5 text-slate-400 bg-slate-900 rounded-b-lg">
+    <pre
+      class="break-all font-mono text-sm">{baseURL +
+            "/api?style=bar\n&progress_color=27AE60\n&background_color=EAF2E3\n&circle_color=EADDCA\n&text_color=145A32\n&caption_color=82E0AA\n&progress=70\n&width=150\n&height=30&text_size=15\n&caption_size=15\n&caption=Success"}
+</pre>
+  </div>
+</div>
+
+<style></style>
