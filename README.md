@@ -5,11 +5,6 @@
   <br>
   <br>
 </h1>
-<p align="center">
-  <a href="https://coveritup.app/readme?org=kevincobain2000&repo=go-progress-svg&branch=master">
-    <img alt="svg circle progress sample" src="https://coveritup.app/progress?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=dark&style=bar">
-  </a>
-</p>
 
 <p align="center">
   <img alt="svg circle progress sample" src="https://imgur.com/UOfAB33.png">
@@ -33,30 +28,6 @@
 **Lightweight:** No dependencies, just a single file.
 
 **Beautiful:** Customizable to rounded corners, different colors, and caption options.
-
----
-## Reports from [coveritup](https://coveritup.app/readme?org=kevincobain2000&repo=go-progress-svg&branch=master)
-
-![go-build-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-build-time)
-![coverage](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage)
-
-![go-lint-errors](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-lint-errors)
-![go-test-run-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-test-run-time)
-
-![npm-install-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-install-time)
-![npm-build-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-build-time)
-
-![go-mod-dependencies](https://coveritup.app/badge?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-mod-dependencies)
-
-![go-lint-errors](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-lint-errors&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
-![go-test-run-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-test-run-time&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
-![go-build-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-build-time&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
-![coverage](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=coverage&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
-![go-mod-dependencies](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=go-mod-dependencies&theme=light&line=fill&width=150&height=150&output=svg&line=fill)
-
-![npm-install-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-install-time&theme=light&line=fill&width=150&height=150&output=svg)
-![npm-build-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-progress-svg&branch=master&type=npm-build-time&theme=light&line=fill&width=150&height=150&output=svg)
-
 
 
 ## Usage
@@ -153,4 +124,4 @@ func main() {
 
 ## CHANGE LOG
 
-- v1.0.0 - initial release
+- **v1.0.0** - initial release

@@ -1,0 +1,40 @@
+on:
+  pull_request:
+  push:
+    tags-ignore:
+      - '**'
+    branches:
+      - '**'
+
+name: "Test"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+jobs:
+  coveritup:
+    strategy:
+      matrix:
+        go-version: [mod]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: kevincobain2000/action-gobrew@v2
+        with:
+          version: ${{ matrix.go-version }}
+      - name: Setup Node.js ${{ matrix.node-versions }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Install Tools
+        run: |
+          go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+          curl -sLk https://raw.githubusercontent.com/kevincobain2000/cover-totalizer/master/install.sh | sh
+
+      - run: cd api/pkg/frontend; npm install; npm run build
+
+
+      - run: go build
+      - run: go test -race -v ./... -count=1
+      - run: golangci-lint run ./...
